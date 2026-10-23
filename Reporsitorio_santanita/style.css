@@ -1,0 +1,143 @@
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+body{
+    background-color: #fdffff;
+    font-family: Roboto;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    height: 100vh;
+}
+
+.search-form input{
+color: #000000;
+padding:10px 200px 10px 10px ;
+border: solid 1px #657aff;
+border-radius:30px  ;
+margin-top:10px ;
+}
+
+.btn-search{
+    border: none;
+    background-color: transparent;
+}
+.mi-lupa{
+    color: #657aff;
+   font-size: 20px;
+}
+header{
+    display:flex ;
+    flex-direction: column;
+    
+}
+.header_imagen img{
+width: 50px;
+height: 50px;
+}
+
+.header_parteSuperior{
+    display: flex;
+    }
+a{
+    text-decoration: none;
+}
+.header_listado{
+display: flex;
+justify-content: flex-start;
+gap: 20px;
+list-style: none;
+overflow: auto;
+white-space: nowrap;
+text-decoration: none;
+padding: 10px;    
+}
+
+     
+  .header_listado a {
+    color: #6e5e2a;
+   
+    border-radius: 10%;
+    padding: 5px 10px;
+    background-color: aliceblue;
+  }
+
+
+    .slider-uno{
+        background-image: url(imagenes/planchaVapor.jpeg);
+        background-position: center;
+
+        width: 200px;
+        height: 200px;
+    }
+    .slider-dos{
+        background-image: url(imagenes/tarjetero.jpeg);
+        background-position: center;
+    }
+    .enunciado,h1,h2{
+        color: #000000;
+    }
+    .slider{
+        display: none;
+        width: 100%;
+        height: 200px; 
+        background-position: center;
+        background-size: 40% 100%;
+        padding: 20px;
+        color:white;
+        background-repeat: no-repeat;
+        background-color:#ededed; 
+    }
+ .active {
+    display: block; /* 2. Solo la que tenga la clase active se muestra */
+}
+
+
+.section-MasVendido {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.content-MasVendido{
+position: relative;
+display: flex ;
+width: 100%;
+max-width: 1200px;
+margin: 0 auto ;
+align-items: center;
+gap: 10px;
+
+
+}
+.box-MasVendido {
+display: flex;
+flex-direction: column;
+  min-width: 250px; /* Usa min-width para que no se encojan */
+  height: 450px;
+  border-radius:11px ;
+  overflow: hidden;
+  padding: 10px;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+.box-MasVendido img {
+     width: 100%;
+    height: 100%;
+    object-fit: cover;/*lo hace proporcionalmete hasta se adecue al contenedor y tambie busca el centro */
+ border-radius:11px ;
+  align-items: center; 
+}
+   .btn-agregarCarrito{
+    width: 100px;
+    height: 50px;
+    background-color: #657aff;
+   
+   }
+   .box-MasVendido a {
+    display: block; /* Convierte el enlace en bloque para que ocupe todo el espacio */
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+       <div class="header_parteSuperior">     <div class="header_imagen">
+            <img src="imagenes/eolicas.jpg" alt="cargando...">
+        </div>
+        <form class="search-form">
+            <input type="search" name="busqueda" placeholder="Que necesitas Hoy?">
+            <button type="submit" class="btn-search">
+        <i class="fa-solid fa-magnifying-glass mi-lupa"></i> 
+    </button>
+        </form>
+</div>
+    <nav class="header_nav">
+        <ul class="header_listado">
+            <li> <a href="#">Nuevo</a></li>
+                 <li> <a href="#">Navidad </a></li>
+                  <li> <a href="#">Jugueteria </a></li>
+                 <li> <a href="#">Deportes</a></li>
+                 <li><a href="#">Electrodomesticos</a></li>
+                 <li><a href="#">Electronica</a>
+                    <li><a href="#">Smart Homes</a>
+                        <li><a href="#">Hogar</a></li>
+                        <li><a href="#">Camas</a>
+                            <li><a href="#">Mobiliarios</a>
+        </ul>
+    </nav>
+    </header>
+<div class="slider-container">
+    <div class="slider slider-uno active">
+    
+       <div class="enunciado"><h1> Gran oferta</h1>
+          <h2>Plancha a vapor </h2> 
+          <p>Plancha con mas comodidad tu ropa </p>  
+          <a href="#" class="hero-btn">Comprar Ahora <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        
+    </div>
+       <div class="slider slider-dos">
+    
+      <div class="enunciado"><h1> Gran oferta</h1>
+          <h2>Plancha a vapor </h2> 
+          <p>Plancha con mas comodidad tu ropa </p>  
+          <a href="#" class="hero-btn">Comprar Ahora <i class="fa-solid fa-arrow-right"></i></a>
+        </div>     
+    </div>
+</div>
+<section class="section-MasVendido">
+<h2>LO MAS VENDIDO</h2>
+<div class="content-MasVendido">
+    <button class="flecha flecha-izq" onclick="moverCarrusel(-1)">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+<div class="box-MasVendido">
+    <a href="producto-detalle.html" class="enlace-producto">
+    <img src="imagenes/cafetera.jpeg" alt="cafetera">
+    </a>
+    <button class="btn-agregarCarrito">AgregarCarrito
+    </button>
+</div>
+<div class="box-MasVendido">
+    <img src="imagenes/led.jpeg" alt="led">
+     <button class="btn-agregarCarrito">AgregarCarrito
+    </button>
+</div>
+<div class="box-MasVendido">
+    <img src="imagenes/planchaVapor.jpeg">
+     <button class="btn-agregarCarrito">AgregarCarrito
+    </button>
+</div>
+<div class="box-MasVendido ">
+    <img src="imagenes/tarjetero.jpeg" alt="tarjetero">
+     <button class="btn-agregarCarrito">AgregarCarrito
+    </button>
+</div>
+<div class="box-MasVendido MasVendido-cinco">
+    <img src="imagenes/tarjeteros.jpeg">
+    <button class="btn-agregarCarrito">AgregarCarrito
+    </button>
+</div>
+<div class="box-MasVendido MasVendido-seis">
+    <img src="imagenes/eolicas.jpg" alt="eolicas">
+    <button class="btn-agregarCarrito">AgregarCarrito
+    </button>
+</div>
+<div class="box-MasVendido "></div>
+<div class="box-MasVendido "></div>
+<button class="flecha flecha-der" onclick="moverCarrusel(1)">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+</section>
+<script src="script.js"></script>
+</body>
+</html.>
