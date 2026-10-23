@@ -127,8 +127,8 @@ flex-direction: column;
      width: 100%;
     height: 100%;
     object-fit: cover;/*lo hace proporcionalmete hasta se adecue al contenedor y tambie busca el centro */
- border-radius:11px ;
-  align-items: center; 
+    border-radius:11px ;
+    align-items: center; 
 }
    .btn-agregarCarrito{
     width: 100px;
