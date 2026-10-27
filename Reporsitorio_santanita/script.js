@@ -38,3 +38,4 @@ document.addEventListener("DOMContentLoaded", () => {
         })  
         .catch(error => console.error("Error cargando el menú:", error));
 });
+

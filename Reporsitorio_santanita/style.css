@@ -11,9 +11,7 @@ body{
     height: 100vh;
 }
 
-
-
-    .slider-uno{
+.slider-uno{
         background-image: url(imagenes/planchaVapor.jpeg);
         background-position: center;
 
