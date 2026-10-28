@@ -17,7 +17,7 @@
     <header id="menu-placeholder" >
 
     </header>
-
+<div class="contenedor-principal">
 <div class="slider-container">
     <div class="slider slider-uno active">
     
@@ -38,51 +38,61 @@
     </div>
 </div>
 <section class="section-MasVendido">
-<h2>LO MAS VENDIDO</h2>
-<div class="content-MasVendido">
-    <button class="flecha flecha-izq" onclick="moverCarrusel(-1)">
-      <i class="fa-solid fa-chevron-left"></i>
-    </button>
-<div class="box-MasVendido">
-    <a href="categorias/producto-detalle.html" class="enlace-producto">
-    <img src="imagenes/cafetera.jpeg" alt="cafetera">
-    </a>
-    <button class="btn-agregarCarrito">AgregarCarrito
-    </button>
-</div>
-<div class="box-MasVendido">
-    <img src="imagenes/led.jpeg" alt="led">
-     <button class="btn-agregarCarrito">AgregarCarrito
-    </button>
-</div>
-<div class="box-MasVendido">
-    <img src="imagenes/planchaVapor.jpeg">
-     <button class="btn-agregarCarrito">AgregarCarrito
-    </button>
-</div>
-<div class="box-MasVendido ">
-    <img src="imagenes/tarjetero.jpeg" alt="tarjetero">
-     <button class="btn-agregarCarrito">AgregarCarrito
-    </button>
-</div>
-<div class="box-MasVendido MasVendido-cinco">
-    <img src="imagenes/tarjeteros.jpeg">
-    <button class="btn-agregarCarrito">AgregarCarrito
-    </button>
-</div>
-<div class="box-MasVendido MasVendido-seis">
-    <img src="imagenes/eolicas.jpg" alt="eolicas">
-    <button class="btn-agregarCarrito">AgregarCarrito
-    </button>
-</div>
-<div class="box-MasVendido "></div>
-<div class="box-MasVendido "></div>
-<button class="flecha flecha-der" onclick="moverCarrusel(1)">
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
-</div>
+    <h2>LO MAS VENDIDO</h2>
+    
+    <!-- 1. Contenedor general que abarca todo -->
+    <div class="contenedor-carrusel-general">
+        
+        <!-- Flecha Izquierda (Estativa a la izquierda) -->
+        <button class="flecha flecha-izq" onclick="moverCarrusel(-1, 'slider-mas-vendido')">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
 
+        <!-- 2. El carrusel donde se deslizan solo las tarjetas -->
+        <div class="content-MasVendido" id="slider-mas-vendido">
+            
+            <div class="box-MasVendido">
+                <a href="categorias/producto-detalle.html" class="enlace-producto">
+                    <img src="imagenes/cafetera.jpeg" alt="cafetera">
+                </a>
+                <button class="btn-agregarCarrito">AgregarCarrito</button>
+            </div>
+            
+            <div class="box-MasVendido">
+                <img src="imagenes/led.jpeg" alt="led">
+                <button class="btn-agregarCarrito">AgregarCarrito</button>
+            </div>
+            
+            <div class="box-MasVendido">
+                <img src="imagenes/planchaVapor.jpeg" alt="plancha">
+                <button class="btn-agregarCarrito">AgregarCarrito</button>
+            </div>
+            
+            <div class="box-MasVendido">
+                <img src="imagenes/tarjetero.jpeg" alt="tarjetero">
+                <button class="btn-agregarCarrito">AgregarCarrito</button>
+            </div>
+
+            <div class="box-MasVendido MasVendido-cinco">
+                <img src="imagenes/tarjeteros.jpeg" alt="tarjeteros">
+                <button class="btn-agregarCarrito">AgregarCarrito</button>
+            </div>
+
+            <div class="box-MasVendido MasVendido-seis">
+                <img src="imagenes/eolicas.jpg" alt="eolicas">
+                <button class="btn-agregarCarrito">AgregarCarrito</button>
+            </div>
+
+        </div>
+
+        <!-- Flecha Derecha (Estativa a la derecha) -->
+        <button class="flecha flecha-der" onclick="moverCarrusel(1, 'slider-mas-vendido')">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
 </section>
+</div>
 <script src="script.js"></script>
 </body>
 </html.>

@@ -39,3 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error cargando el menú:", error));
 });
 
+function moverCarrusel(direccion, idContenedor) {
+    const slider = document.getElementById(idContenedor);
+    
+    // 300 es la cantidad de píxeles que se desplaza la vista por cada clic en la flecha
+    const desplazamiento = 300 * direccion; 
+    
+    slider.scrollBy({
+        left: desplazamiento,
+        behavior: 'smooth' // Hace que se mueva fluido tipo animación
+    });
+}

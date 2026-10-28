@@ -10,7 +10,17 @@ body{
     letter-spacing: 0.5px;
     height: 100vh;
 }
-
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+.contenedor-principal{
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido perfectamente */
+    box-sizing: border-box;
+}
 .slider-uno{
         background-image: url(imagenes/planchaVapor.jpeg);
         background-position: center;
@@ -87,4 +97,78 @@ flex-direction: column;
     display: block; /* Convierte el enlace en bloque para que ocupe todo el espacio */
     width: 100%;
     height: 100%;
+}
+
+.content-MasVendido {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Permite deslizar horizontalmente */
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Oculta la barra en Firefox */
+    padding: 10px 0;
+}
+
+/* Contenedor general que sirve de marco */
+.contenedor-carrusel-general {
+    position: relative; /* Clave para que las flechas se posicionen respecto a esta caja */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* El carrusel de productos interno */
+.content-MasVendido {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Oculta scroll en Firefox */
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Oculta scroll en Chrome/Edge */
+.content-MasVendido::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ancho fijo para que las tarjetas no se deformen al deslizar */
+.box-MasVendido {
+    flex: 0 0 220px;
+    box-sizing: border-box;
+}
+
+/* Estilo y posición fija para las flechas */
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Las centra verticalmente de forma perfecta */
+    z-index: 10; /* Asegura que la flecha flote siempre por encima de las fotos */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.flecha:hover {
+    background-color: #f0f0f0;
+}
+
+/* Ubicación exacta de la flecha izquierda */
+.flecha-izq {
+    left: -20px; /* Las saca ligeramente hacia el borde exterior del bloque */
+}
+
+/* Ubicación exacta de la flecha derecha */
+.flecha-der {
+    right: -20px;
 }
