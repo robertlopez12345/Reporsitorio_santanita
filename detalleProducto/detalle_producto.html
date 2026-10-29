@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+          <link rel="stylesheet" href="../componentes/header.css">
+          <link rel="stylesheet" href="../componentes/body.css">
+          <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="detalle.css">
+</head>
+<body>
+    <div id="menu-placeholder"> </div>
+  <main class="contenedor-detalle-producto">
+    
+    <!-- Columna Izquierda: Las miniaturas verticales -->
+    <div class="columna-miniaturas" id="contenedor-miniaturas">
+        <!-- JavaScript las llenará aquí automáticamente -->
+    </div>
+
+    <!-- Columna Central: La imagen grande principal -->
+    <div class="columna-imagen-grande">
+        <span id="badge-descuento" class="badge"></span>
+        <img id="imagen-principal" src="" alt="Vista principal del producto">
+    </div>
+
+    <!-- Columna Derecha: Información y botones de compra -->
+    <div class="columna-info">
+        <h1 id="nombre-producto"></h1>
+        <p>Código de producto: <span id="codigo-producto"></span></p>
+        <div class="precios">
+            <span id="precio-actual" class="precio-actual"></span>
+            <span id="precio-anterior" class="precio-anterior"></span>
+        </div>
+        <button class="btn-agregarCarrito">Agregar al Carrito</button>
+    </div>
+
+</main>  
+<script src="../script.js"></script>
+    <script src="detalle.js"></script>
+
+   <script src="objetosDetalle.js"></script>
+
+    
+</body>
+</html>

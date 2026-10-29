@@ -9,7 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="componentes/header.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/body.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -20,23 +21,28 @@
 <div class="contenedor-principal">
 <div class="slider-container">
     <div class="slider slider-uno active">
-    
-       <div class="enunciado"><h1> Gran oferta</h1>
-          <h2>Plancha a vapor </h2> 
-          <p>Plancha con mas comodidad tu ropa </p>  
-          <a href="#" class="hero-btn">Comprar Ahora <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="detalleProducto/detalle_producto.html?id=1" class="enlace-producto">
+         <div class="enunciado uno">
+         <h1>OFERTA</h1>
+         <h2>Plancha</h2>
+         <p>a tan solo 200 lps</p>
+        </div>
+            <img src="imagenes/cafetera.jpeg" alt="cafetera">
+                </a>
         </div>
         
-    </div>
-       <div class="slider slider-dos">
+           <div class="slider slider-dos">
     
-      <div class="enunciado"><h1> Gran oferta</h1>
-          <h2>Plancha a vapor </h2> 
-          <p>Plancha con mas comodidad tu ropa </p>  
-          <a href="#" class="hero-btn">Comprar Ahora <i class="fa-solid fa-arrow-right"></i></a>
+       <a href="detalleProducto/detalle_producto.html?id=2" class="enlace-producto">
+        <div class="enunciado dos">
+         <h1>OFERTA</h1>
+         <h2>LED</h2>
+         <p>a tan solo 220 lps</p>
+        </div>            
+        <img src="imagenes/led.jpeg" alt="cafetera">
+                </a>
         </div>     
     </div>
-</div>
 <section class="section-MasVendido">
     <h2>LO MAS VENDIDO</h2>
     
@@ -52,7 +58,7 @@
         <div class="content-MasVendido" id="slider-mas-vendido">
             
             <div class="box-MasVendido">
-                <a href="categorias/producto-detalle.html" class="enlace-producto">
+                <a href="detalleProducto/detalle_producto.html?id=1" class="enlace-producto">
                     <img src="imagenes/cafetera.jpeg" alt="cafetera">
                 </a>
                 <button class="btn-agregarCarrito">AgregarCarrito</button>
@@ -94,5 +100,6 @@
 </section>
 </div>
 <script src="script.js"></script>
+<script src="Java_script/header.js"></script>
 </body>
-</html.>
+</html>
