@@ -1,22 +1,27 @@
+// ==========================================
+// 1. CARRUSEL AUTOMÁTICO (Protegido)
+// ==========================================
 const slides = document.querySelectorAll('.slider');
-
 let indiceActual = 0;
- 
-function cambiaSlide (){
 
-    slides[indiceActual].classList.remove('active');
-
-    indiceActual=(indiceActual+1) % slides.length;
-
-    slides[indiceActual].classList.add('active');
+function cambiaSlide() {
+    if (slides.length > 0) {
+        slides[indiceActual].classList.remove('active');
+        indiceActual = (indiceActual + 1) % slides.length;
+        slides[indiceActual].classList.add('active');
+    }
 }
-   setInterval(cambiaSlide,3000);
+
+// Solo activa el temporizador si existen elementos .slider en esta página
+if (slides.length > 0) {
+    setInterval(cambiaSlide, 3000);
+}
 
 
-// 2. Carga automática del Header adaptada a tu estructura
+// ==========================================
+// 2. CARGA AUTOMÁTICA DEL HEADER (Local y GitHub)
+// ==========================================
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // Por defecto asumimos que estamos en una subcarpeta (como /categorias/ o /detalleProducto/)
     let rutaHeader = '../componentes/header.html';
     let rutaLogo = '../imagenes/eolicas.jpg';
 
@@ -41,19 +46,35 @@ document.addEventListener("DOMContentLoaded", () => {
             if (logoHeader) {
                 logoHeader.src = rutaLogo;
             }
-        }) // <-- ¡Aquí estaba el cierre que faltaba!
+
+            // Solución automática: Si estás en GitHub Pages, ajusta los enlaces de forma transparente
+            if (window.location.hostname.includes('github.io')) {
+                const enlaces = document.querySelectorAll('#menu-placeholder a');
+                enlaces.forEach(enlace => {
+                    let hrefActual = enlace.getAttribute('href');
+                    if (hrefActual && hrefActual.startsWith('/') && !hrefActual.startsWith('/Reporsitorio_santanita')) {
+                        enlace.setAttribute('href', '/Reporsitorio_santanita' + hrefActual);
+                    }
+                });
+            }
+        })
         .catch(error => console.error("Error cargando el menú:", error));
 });
 
 
+// ==========================================
+// 3. MOVIMIENTO DE CARRUSELES (Flechas)
+// ==========================================
 function moverCarrusel(direccion, idContenedor) {
     const slider = document.getElementById(idContenedor);
     
-    // 300 es la cantidad de píxeles que se desplaza la vista por cada clic en la flecha
-    const desplazamiento = 300 * direccion; 
-    
-    slider.scrollBy({
-        left: desplazamiento,
-        behavior: 'smooth' // Hace que se mueva fluido tipo animación
-    });
+    if (slider) {
+        // 300 es la cantidad de píxeles que se desplaza por cada clic
+        const desplazamiento = 300 * direccion; 
+        
+        slider.scrollBy({
+            left: desplazamiento,
+            behavior: 'smooth' // Desplazamiento fluido
+        });
+    }
 }
