@@ -1,8 +1,8 @@
 const listaProductos = [
     {
         id: 1,
-        nombre: 'SMART QLED TV JVC 50" FHD GOOGLE TV',
-        precio: 'L. 6,990.00',
+        nombre: 'CAFETERA',
+        precio: 'L.400.00',
         precioAnterior: 'L. 7,990.00',
         descuento: '- 13% descuento',
         codigo: 'LT-50KM4584',
