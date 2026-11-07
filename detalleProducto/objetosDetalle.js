@@ -7,12 +7,13 @@ const listaProductos = [
         descuento: '- 13% descuento',
         codigo: 'LT-50KM4584',
         imagenPrincipal: '../imagenes/tarjetero.jpeg',
+        alt:'cafetera',
         // Una lista con las miniaturas de este producto en específico
         imagenesSecundarias: [
             '../imagenes/cafetera.jpeg',
             '../imagenes/led.jpeg',
             '../imagenes/planchaVapor.jpeg'
-        ]
+        ] 
     },
      {
         id: 2,
@@ -22,6 +23,7 @@ const listaProductos = [
         descuento: '- 13% descuento',
         codigo: 'LT-50KM4584',
         imagenPrincipal: '../imagenes/led.jpeg',
+        alt:'cafetera',
         // Una lista con las miniaturas de este producto en específico
         imagenesSecundarias: [
             '../imagenes/cafetera.jpeg',

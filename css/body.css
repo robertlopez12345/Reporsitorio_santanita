@@ -14,14 +14,18 @@ body{
 display: grid;
 grid-template-columns: repeat(4,1fr);
 height: 100vh;
-gap: 3px;
+background-color: #ededed;
 
-
-}.box img{
+.box{
+     border:1px solid #070707 ;
+}
+}
+.box img{
     width: 250px;
     height: 250px;
    padding: 10px; 
    object-fit: cover;/*lo hace proporcionalmete hasta se adecue al contenedor y tambie busca el centro */
     border-radius:11px ;
     align-items: center;
+    border:1px solid #070707 ;
 }

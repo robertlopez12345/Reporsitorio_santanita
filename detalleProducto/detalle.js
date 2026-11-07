@@ -1,23 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // 1. Leemos los parámetros de la URL
     const parametros = new URLSearchParams(window.location.search);
-    const productoId = parseInt(parametros.get('id'));
+    const categoria = parametros.get('categoria'); // Ej: "categoria1" o "categoria2"
+    const productoId = parseInt(parametros.get('id')); 
 
-    // Buscamos el producto en tu archivo de datos
-    const producto = listaProductos.find(p => p.id === productoId);
+    // 2. DICCIONARIO ADAPTADO A TUS NUEVOS NOMBRES
+    const baseDeDatosGlobal = {
+        'categoria1': typeof objetosCategoria1 !== 'undefined' ? objetosCategoria1 : [],
+        'categoria2': typeof objetosCategoria2 !== 'undefined' ? objetosCategoria2 : []
+    };
+
+    // 3. Buscamos automáticamente la lista correcta
+    const listaAUsar = baseDeDatosGlobal[categoria] || [];
+    const producto = listaAUsar.find(p => p.id === productoId);
 
     if (producto) {
-        // 1. Rellenamos textos y precios
         document.getElementById('nombre-producto').textContent = producto.nombre;
         document.getElementById('codigo-producto').textContent = producto.codigo;
         document.getElementById('precio-actual').textContent = producto.precio;
-       
-        
 
-        // 2. Establecemos la imagen principal por defecto (la primera de la lista)
         const imgPrincipal = document.getElementById('imagen-principal');
         imgPrincipal.src = producto.imagenPrincipal;
 
-        // 3. Generamos las miniaturas en la columna izquierda
         const contenedorMiniaturas = document.getElementById('contenedor-miniaturas');
         let htmlMiniaturas = '';
 
@@ -30,16 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         contenedorMiniaturas.innerHTML = htmlMiniaturas;
+    } else {
+        console.error("No se encontró el producto o la categoría no es válida.");
     }
 });
 
-// Función global para cambiar la foto grande al hacer clic en una miniatura
 function cambiarImagenGrande(nuevaRuta) {
     const imgPrincipal = document.getElementById('imagen-principal');
     imgPrincipal.src = nuevaRuta;
 }
-
-
 const botonWp = document.getElementById('btn-whatsapp');
 
 if (botonWp) {
