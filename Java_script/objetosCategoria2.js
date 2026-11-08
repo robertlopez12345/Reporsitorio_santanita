@@ -19,7 +19,7 @@ const objetosCategoria2 = [
      {
         id: 2,
         categoria:'categoria2',
-        nombre: 'SMART QLED TV JVC 50" FHD GOOGLE TV',
+        nombre: 'SMART QLED TV',
         precio: 'L. 6,990.00',
         precioAnterior: 'L. 7,990.00',
         descuento: '- 13% descuento',

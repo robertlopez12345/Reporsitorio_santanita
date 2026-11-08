@@ -16,16 +16,55 @@ grid-template-columns: repeat(4,1fr);
 height: 100vh;
 background-color: #ededed;
 
-.box{
-     border:1px solid #070707 ;
+gap: 20px;
 }
+.box-producto{
+     background-color: #fff;
+     border:1px solid #c5bdbd ;
+     border-radius:20px;
+     height: 400px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
 }
-.box img{
+
+.box-producto img{
     width: 250px;
     height: 250px;
-   padding: 10px; 
-   object-fit: cover;/*lo hace proporcionalmete hasta se adecue al contenedor y tambie busca el centro */
+    padding: 10px; 
+    object-fit: cover;/*lo hace proporcionalmete hasta se adecue al contenedor y tambie busca el centro */
     border-radius:11px ;
     align-items: center;
-    border:1px solid #070707 ;
+  
+     width: 100%;
+}
+.contenedor-detalles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.contenedor-detalles h2 {
+    text-transform: uppercase; 
+    color:rgb(26, 101, 212);   
+}
+.contenedor-detalles p{
+
+    font-size: 1rem;
+}
+.contenedor-btn{
+display: flex;
+justify-content: center;
+
+}
+.btn-comprar{
+border-radius: 50px;
+border: solid 1px #fff8f8;
+padding:4% 30%;
+background-color:rgb(11, 137, 221);;
+color: #fff;
+font-weight: bolder;
+font-size: 13px;
 }

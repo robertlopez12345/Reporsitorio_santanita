@@ -23,15 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
         // Recorremos la lista activa de esta página
         listaActiva.forEach(item => {
             contenidoHTML += `
-                <div class="box">
+            
+                <div class="box-producto">
                     <!-- Imagen que lleva al detalle con su categoría y su ID -->
-                    <a class="btn-Comprar" href="../detalleProducto/detalle_producto.html?categoria=${nombreCategoria}&id=${item.id}">
+                    <a href="../detalleProducto/detalle_producto.html?categoria=${nombreCategoria}&id=${item.id}">
                         <img src="${item.imagenPrincipal}" alt="${item.nombre}">
                     </a>
-                    
-                    <!-- Botón de texto que también lleva al detalle correctamente -->
-                    <a class="btn-Comprar" href="../detalleProducto/detalle_producto.html?categoria=${nombreCategoria}&id=${item.id}">Comprar</a>
-                </div>
+                    <div class="contenedor-detalles">
+                    <h2>${item.nombre}</h2>
+                     <p>${item.precio}</p></div>
+                    <div class="contenedor-btn">
+                    <a class="btn-comprar" href="../detalleProducto/detalle_producto.html?categoria=${nombreCategoria}&id=${item.id}">Comprar</a>
+                     </div> 
+                    </div>
+                   
             `;
         });
 
